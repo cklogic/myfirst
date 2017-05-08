@@ -38,7 +38,7 @@
 			</property>
 		</bean>
 
-		<bean id="userBaseInfoDao" class="com.test.dao.UserBaseInfoDao">
+		<bean id="userBaseInfoDao" class="com.test.dao.impl.UserBaseInfoDaoImpl">
 			<property name="jdbcTemplate">
 				<ref bean="jdbcTemplate" />
 			</property>

@@ -20,8 +20,8 @@ import com.test.model.UserBaseInfo;
 
 
 @Controller
-@RequestMapping("/User")
-public class UserInfoAction {
+@RequestMapping("/UserBaseInfo")
+public class UserBaseInfoController {
 	@Autowired
 	public UserBaseInfoDao userBaseInfoDao;
 	
