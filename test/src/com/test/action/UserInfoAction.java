@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.test.dao.UserDao;
-import com.test.model.User;
+import com.test.dao.UserBaseInfoDao;
+import com.test.model.UserBaseInfo;
 
 
 
@@ -23,12 +23,12 @@ import com.test.model.User;
 @RequestMapping("/User")
 public class UserInfoAction {
 	@Autowired
-	public UserDao userDao;
+	public UserBaseInfoDao userBaseInfoDao;
 	
     @ResponseBody
     @RequestMapping(value="/getUserList",method=RequestMethod.GET)
-    public List<User> getUserList(){
-        List<User> list=userDao.findALL();
+    public List<UserBaseInfo> getUserList(){
+        List<UserBaseInfo> list=userBaseInfoDao.findALL();
         System.out.println("Hello,world");
         return list;
     }
@@ -36,7 +36,7 @@ public class UserInfoAction {
     @ResponseBody
     @RequestMapping(value="/delete/{id}",method=RequestMethod.GET)
     public int delect(@PathVariable int id){
-        int a=userDao.delete(id);
+        int a=userBaseInfoDao.delete(id);
         System.out.println("Hello,world");
         return a;
     }
