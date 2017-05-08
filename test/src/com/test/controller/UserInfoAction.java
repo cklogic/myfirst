@@ -1,4 +1,4 @@
-package com.test.action;
+package com.test.controller;
 
 
 
